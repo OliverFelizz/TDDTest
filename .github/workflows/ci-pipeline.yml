@@ -1,0 +1,14 @@
+name: CI Pipeline
+on: [push, pull_request]  # Se ejecuta en cada push o pull request
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Usa la última versión de Ubuntu
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3  # Clona el repositorio
+
+      - name: Configurar entorno
+        run: echo "Configurando entorno de compilación"  # Mensaje de ejemplo
+
+      - name: Compilar proyecto
+        run: echo "Ejecutando compilación"  # Mensaje de ejemplo
